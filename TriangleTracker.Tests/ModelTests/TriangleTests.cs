@@ -7,10 +7,17 @@ namespace TriangleTracker.Tests
   public class TriangleTests
   {
     [TestMethod]
-    public void TriangleChecker_ChecksIfEquilateral_Equilateral()
+    public void TriangleChecker_ChecksTriangleType_Equilateral()
     {
       Triangle newTriangle = new Triangle(3,3,3);
       Assert.AreEqual("Equilateral", newTriangle.TriangleChecker());
+    }
+
+    [TestMethod]
+    public void TriangleChecker_ChecksTriangleType_Isosceles()
+    {
+      Triangle newTriangle = new Triangle(3,3,1);
+      Assert.AreEqual("Isosceles", newTriangle.TriangleChecker());
     }
   }
 }
