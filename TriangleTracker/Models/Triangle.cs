@@ -17,7 +17,14 @@ namespace TriangleTracker.Models
 
     public string TriangleChecker()
     {
-      return "Isosceles";
+      if (_side1 == _side2 && _side1 == _side3)
+      {
+        return "Equilateral";
+      }
+      else
+      {
+        return "Isosceles";
+      }
     }
   }
 }
