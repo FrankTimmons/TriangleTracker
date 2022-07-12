@@ -21,9 +21,13 @@ namespace TriangleTracker.Models
       {
         return "Equilateral";
       }
-      else
+      else if (_side1 == _side2 || _side1 == _side3  || _side2 == _side3)
       {
         return "Isosceles";
+      }
+      else
+      {
+        return "Scalene";
       }
     }
   }
