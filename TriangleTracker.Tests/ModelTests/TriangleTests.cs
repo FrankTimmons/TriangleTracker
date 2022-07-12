@@ -26,5 +26,12 @@ namespace TriangleTracker.Tests
       Triangle newTriangle = new Triangle(3,2,1);
       Assert.AreEqual("Scalene", newTriangle.TriangleChecker());
     }
+
+    [TestMethod]
+    public void TriangleChecker_ChecksTriangleType_InvalidTriangle()
+    {
+      Triangle newTriangle = new Triangle(5,2,2);
+      Assert.AreEqual("Invalid Triangle", newTriangle.TriangleChecker());
+    }
   }
 }
