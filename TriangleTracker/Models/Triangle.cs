@@ -17,7 +17,11 @@ namespace TriangleTracker.Models
 
     public string TriangleChecker()
     {
-      if (_side1 == _side2 && _side1 == _side3)
+      if (_side1 > (_side2 + _side3) || _side2 > (_side1 + _side3) || _side3 > (_side1 + _side2))
+      {
+        return "Invalid Triangle";
+      }
+      else if (_side1 == _side2 && _side1 == _side3)
       {
         return "Equilateral";
       }
