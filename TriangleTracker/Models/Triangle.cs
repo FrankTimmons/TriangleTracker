@@ -17,7 +17,7 @@ namespace TriangleTracker.Models
 
     public string TriangleChecker()
     {
-      return "";
+      return "Equilateral";
     }
   }
 }
