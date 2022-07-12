@@ -19,5 +19,12 @@ namespace TriangleTracker.Tests
       Triangle newTriangle = new Triangle(3,3,1);
       Assert.AreEqual("Isosceles", newTriangle.TriangleChecker());
     }
+
+    [TestMethod]
+    public void TriangleChecker_ChecksTriangleType_Scalene()
+    {
+      Triangle newTriangle = new Triangle(3,2,1);
+      Assert.AreEqual("Scalene", newTriangle.TriangleChecker());
+    }
   }
 }
